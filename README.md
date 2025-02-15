@@ -64,7 +64,6 @@ O **Planetas App** foi desenvolvido com as seguintes tecnologias:
 Contribuições são sempre bem-vindas! Se você deseja contribuir, siga estas etapas:
 
 4. Faça um fork do projeto.
-   
 5. Crie uma nova branch:
    ```sh
   git checkout -b minha-feature
