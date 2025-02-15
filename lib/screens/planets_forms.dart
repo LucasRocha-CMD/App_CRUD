@@ -1,4 +1,3 @@
-
 import '../database/database_helper.dart';
 import '../models/planets.dart';
 import 'package:flutter/material.dart';
@@ -25,7 +24,7 @@ class _PlanetsFormsState extends State<PlanetsForms> {
         nome: _nomeController.text,
         tamanho: double.parse(_tamanhoController.text),
         distancia: double.parse(_distanciaController.text),
-        apelido: _apelidoController.text, id: 0,
+        apelido: _apelidoController.text,
       );
 
       int id = await DatabaseHelper.instance.insertPlanet(planeta);
@@ -38,10 +37,10 @@ class _PlanetsFormsState extends State<PlanetsForms> {
       _tamanhoController.clear();
       _distanciaController.clear();
       _apelidoController.clear();
-       if (mounted){
+      if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('Planeta salvo com sucesso!')),
-      );
+          const SnackBar(content: Text('Planeta salvo com sucesso!')),
+        );
       }
     }
   }

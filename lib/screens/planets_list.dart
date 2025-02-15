@@ -57,8 +57,11 @@ class _PlanetsListState extends State<PlanetsList> {
                     'Distância: ${planet.distancia}, Tamanho: ${planet.tamanho}, Apelido: ${planet.apelido}'),
                 trailing: IconButton(
                   icon: const Icon(Icons.delete),
-                  onPressed: () =>
-                      _deletePlanet(planet.id), // Passa o ID do planeta
+                  onPressed: () {
+                    if (planet.id != null) {
+                      _deletePlanet(planet.id!); // Use o operador de negação para garantir que id não é nulo
+                    }
+                  },
                 ),
                 onTap: () {
                   Navigator.push(

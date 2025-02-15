@@ -1,12 +1,12 @@
 class Planets {
-  int id;
+  int? id; // Permitindo id nulo
   final String nome;
   final double tamanho;
   final double distancia;
   final String apelido;
 
   Planets({
-    required this.id,
+    this.id, // id é opcional
     required this.nome,
     required this.tamanho,
     required this.distancia,
